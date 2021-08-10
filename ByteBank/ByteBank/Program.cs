@@ -11,30 +11,34 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            GerenciadorBonificacao gereciador = new GerenciadorBonificacao();
-            Funcionario carlos = new Funcionario("118.732.118-90");
-
-            carlos.Nome = "Carlos";
-            carlos.Salario = 2000;
-            gereciador.Registrar(carlos);
-
-            Diretor roberta = new Diretor("431.732.118-55");
-
-            roberta.Nome = "Roberta";
-            roberta.Salario = 5000;
-            gereciador.Registrar(roberta);
-
-            Console.WriteLine(carlos.Nome);
-            Console.WriteLine(carlos.GetBonificacao());
-
-            Console.WriteLine(roberta.Nome);
-            Console.WriteLine(roberta.GetBonificacao());
-
-            Console.WriteLine("Total de bonificação: " + gereciador.GetTotalBonificacao());
-            Console.WriteLine("Total de Funcionarios: " + Funcionario.TotalDeFuncionarios);
-
+            CalcularBonificacao();
 
             Console.ReadLine();
+        }
+        public static void CalcularBonificacao()
+        {
+            GerenciadorBonificacao gerenciadorBonificacao = new GerenciadorBonificacao();
+
+            Auxiliar joao = new Auxiliar("118.736.445-55");
+            joao.Nome = "Joao";
+            gerenciadorBonificacao.Registrar(joao);
+
+            Designer maria = new Designer("888.444.444-88");
+            maria.Nome = "Maria";
+            gerenciadorBonificacao.Registrar(maria);
+
+            Diretor carlos = new Diretor("741.523.456-99");
+            carlos.Nome = "Carlos";
+            gerenciadorBonificacao.Registrar(carlos);
+
+            GerenteDeConta luana = new GerenteDeConta("787.123.456-78");
+            luana.Nome = "Luana";
+            gerenciadorBonificacao.Registrar(luana);
+
+            Console.WriteLine("Total de Bonificações: " + gerenciadorBonificacao.GetTotalBonificacao());
+
+
+
         }
     }
 }
