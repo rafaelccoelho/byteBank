@@ -35,6 +35,11 @@ namespace ByteBank
             luana.Nome = "Luana";
             gerenciadorBonificacao.Registrar(luana);
 
+            GerenteDeConta rafael = new GerenteDeConta("222.555.456-78");
+            rafael.Nome = "Rafael";
+            gerenciadorBonificacao.Registrar(rafael);
+
+
             Console.WriteLine("Total de Bonificações: " + gerenciadorBonificacao.GetTotalBonificacao());
 
 
