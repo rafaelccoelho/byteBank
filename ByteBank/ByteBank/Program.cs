@@ -30,6 +30,10 @@ namespace ByteBank
             luana.Nome = "Luana";
             luana.Senha = "abc";
 
+            ParceiroComercial tais = new ParceiroComercial();
+            tais.Senha = "123456";
+
+            sistema.Logar(tais, "123456");
             sistema.Logar(carlos, "123");
             sistema.Logar(luana, "abc");
 
